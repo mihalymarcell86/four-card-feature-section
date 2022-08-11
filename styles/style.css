@@ -10,13 +10,103 @@
   padding: 0;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0deg, 0%, 98%);
+  padding: 5.6666666667rem 2.1333333333rem 5.2rem;
 }
 
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
+.header {
+  text-align: center;
+  margin-bottom: 5.0666666667rem;
+}
+
+.header__title {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 275;
+  letter-spacing: 0.166667px;
+  color: hsl(234deg, 12%, 34%);
+  margin-bottom: 0.0416666667em;
+}
+.header__title strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5416666667em;
+}
+
+.header__paragraph {
+  font-size: 1rem;
+  line-height: 1.6666666667;
+  font-weight: 400;
+  letter-spacing: 0.104167px;
+  color: hsl(234deg, 12%, 34%);
+  opacity: 0.5;
+}
+
+.products {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  gap: 1.6666666667rem;
+}
+
+.product {
+  background-color: white;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  padding: 1.8rem 1.8666666667rem 1.8666666667rem 1.9333333333rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.product::before {
+  content: "";
+  width: 100%;
+  height: 3.55px;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product--supervisor::before {
+  background-color: hsl(180deg, 62%, 55%);
+}
+
+.product--team-builder::before {
+  background-color: hsl(0deg, 78%, 62%);
+}
+
+.product--karma::before {
+  background-color: hsl(34deg, 97%, 64%);
+}
+
+.product--calculator::before {
+  background-color: hsl(212deg, 86%, 64%);
+}
+
+.product__img {
+  width: 3.8rem;
+  height: 3.8rem;
+  align-self: flex-end;
+}
+
+.product__name {
+  font-size: 1.3333333333rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: hsl(234deg, 12%, 34%);
+  margin-bottom: 0.05em;
+}
+
+.product__description {
+  font-size: 0.8666666667rem;
+  line-height: 1.7692307692;
+  font-weight: 400;
+  color: hsl(234deg, 12%, 34%);
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
