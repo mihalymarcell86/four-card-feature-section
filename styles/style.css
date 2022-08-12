@@ -19,9 +19,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   body {
-    padding: 5.3333333333rem 11rem;
+    padding: 5.3333333333rem 0;
   }
 }
 
@@ -29,7 +29,7 @@ body {
   text-align: center;
   margin-bottom: 5.0666666667rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .header {
     margin-bottom: 4.2666666667rem;
   }
@@ -48,7 +48,7 @@ body {
   font-weight: 600;
   margin-bottom: 0.5416666667em;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .header__title {
     font-size: 2.4rem;
     line-height: 1.5;
@@ -76,10 +76,11 @@ body {
   gap: 1.6666666667rem;
   margin-bottom: 3.3333333333rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .products {
     grid-template: repeat(2, min-content)/repeat(3, 1fr);
     gap: 2rem;
+    max-width: 74rem;
   }
 }
 
@@ -103,7 +104,7 @@ body {
   top: 0;
   left: 0;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product {
     padding: 2.1333333333rem;
     gap: 2.6666666667rem;
@@ -116,7 +117,7 @@ body {
 .product--supervisor::before {
   background-color: hsl(180deg, 62%, 55%);
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product--supervisor {
     grid-row: 1/3;
     align-self: center;
@@ -126,7 +127,7 @@ body {
 .product--team-builder::before {
   background-color: hsl(0deg, 78%, 62%);
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product--team-builder {
     grid-column: 2/3;
   }
@@ -135,7 +136,7 @@ body {
 .product--karma::before {
   background-color: hsl(34deg, 97%, 64%);
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product--karma {
     grid-column: 2/3;
   }
@@ -144,7 +145,7 @@ body {
 .product--calculator::before {
   background-color: hsl(212deg, 86%, 64%);
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product--calculator {
     grid-row: 1/3;
     grid-column: 3/4;
@@ -157,7 +158,7 @@ body {
   height: 3.8rem;
   align-self: flex-end;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product__img {
     width: 4.2666666667rem;
     height: 4.2666666667rem;
@@ -171,7 +172,7 @@ body {
   color: hsl(234deg, 12%, 34%);
   margin-bottom: 0.05em;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product__name {
     margin-bottom: 0.3em;
   }
