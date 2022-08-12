@@ -6,11 +6,21 @@ body {
   font-family: $font-poppins;
   background-color: color(very-light-gray);
   padding: rem(85px) rem(32px) rem(78px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $breakpoint) {
+    padding: rem(80px) rem(165px);
+  }
 }
 
 .header {
   text-align: center;
   margin-bottom: rem(76px);
+  @media (min-width: $breakpoint) {
+    margin-bottom: rem(64px);
+  }
 }
 
 .header__title {
@@ -23,6 +33,14 @@ body {
     font-weight: 600;
     margin-bottom: em(13px, 24px);
   }
+  @media (min-width: $breakpoint) {
+    @include setFont(rem(36px), 54px);
+    letter-spacing: 0.25px;
+    margin-bottom: em(1px, 36px);
+    strong {
+      margin-bottom: em(13px, 36px);
+    }
+  }
 }
 
 .header__paragraph {
@@ -30,12 +48,18 @@ body {
   letter-spacing: 0.104167px;
   color: color(very-dark-blue);
   opacity: 0.5;
+  max-width: rem(540px);
 }
 
 .products {
   display: grid;
   grid-template-rows: repeat(4, min-content);
   gap: rem(25px);
+  margin-bottom: rem(50px);
+  @media (min-width: $breakpoint) {
+    grid-template: repeat(2, min-content) / repeat(3, 1fr);
+    gap: rem(30px);
+  }
 }
 
 .product {
@@ -57,26 +81,48 @@ body {
     top: 0;
     left: 0;
   }
+  @media (min-width: $breakpoint) {
+    padding: rem(32px);
+    gap: rem(40px);
+    &::before {
+      height: 4px;
+    }
+  }
 }
 
 .product--supervisor {
   &::before {
     background-color: color(cyan);
   }
+  @media (min-width: $breakpoint) {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
 }
 .product--team-builder {
   &::before {
     background-color: color(red);
+  }
+  @media (min-width: $breakpoint) {
+    grid-column: 2 / 3;
   }
 }
 .product--karma {
   &::before {
     background-color: color(orange);
   }
+  @media (min-width: $breakpoint) {
+    grid-column: 2 / 3;
+  }
 }
 .product--calculator {
   &::before {
     background-color: color(blue);
+  }
+  @media (min-width: $breakpoint) {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+    align-self: center;
   }
 }
 
@@ -84,30 +130,32 @@ body {
   width: rem(57px);
   height: rem(57px);
   align-self: flex-end;
+  @media (min-width: $breakpoint) {
+    width: rem(64px);
+    height: rem(64px);
+  }
 }
 
 .product__name {
   @include setFont(rem(20px), 30px, 600);
   color: color(very-dark-blue);
   margin-bottom: em(1px, 20px);
+  @media (min-width: $breakpoint) {
+    margin-bottom: em(6px, 20px);
+  }
 }
 
 .product__description {
   @include setFont(rem(13px), 23px, 400);
   color: color(very-dark-blue);
   opacity: 0.5;
+  letter-spacing: 0.0902778px;
 }
 
-//TODO: sort out attribution
-// footer {
-//   position: absolute;
-//   bottom: 1em;
-// }
-
-// .attribution {
-//   font-size: 11px;
-//   text-align: center;
-// }
-// .attribution a {
-//   color: hsl(228, 45%, 44%);
-// }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
